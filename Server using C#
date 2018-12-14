@@ -35,7 +35,7 @@ namespace consolefrompi
 
                 TcpClient tcpclient = listener.AcceptTcpClient();
 
-                // Threads for multple 
+                // Threads for multple connection 
 
                 Thread tcpclientThread;
                 tcpclientThread = new Thread(() => clientConnection(tcpclient));
@@ -59,7 +59,7 @@ namespace consolefrompi
             // Displaying the data d_station which is the tring bcoming from station
 
             Console.WriteLine("connection stablished : " + d_station);
-             Console.WriteLine("HELP NEEDED ON  : " + d_station);
+            Console.WriteLine("HELP NEEDED ON  : " + d_station);
             NewStream.Write(buffer, 0, bytesRead);
             Console.WriteLine("\n");
 
